@@ -6,14 +6,14 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #1e1e1e;
-  background: white;
+  color: #2f2a26;
+  background: #f7f3ee;
 }
 
 .hero {
   min-height: 100vh;
-  background: #1428d4;
-  color: white;
+  background: #f7f3ee;
+  color: #2f2a26;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -25,13 +25,19 @@ body {
   width: 100%;
   max-height: 620px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 18px;
 }
 
 .hero-text h1 {
-  font-size: 110px;
+  font-size: 85px;
   font-weight: 300;
-  line-height: 0.95;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.owner {
+  font-size: 18px;
+  color: #6f6258;
   margin-bottom: 30px;
 }
 
@@ -39,20 +45,28 @@ body {
   font-size: 20px;
   line-height: 1.5;
   max-width: 560px;
-  color: #d9ddff;
+  color: #6f6258;
 }
 
 .features {
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
+  gap: 18px;
   margin: 28px 0;
-  font-size: 17px;
+  font-size: 16px;
+  color: #2f2a26;
+}
+
+.features span {
+  background: #efe6dc;
+  padding: 10px 14px;
+  border-radius: 999px;
 }
 
 .buttons {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btn,
@@ -62,25 +76,39 @@ button {
   text-decoration: none;
   font-size: 17px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.primary {
-  background: white;
-  color: #111;
+.primary,
+button {
+  background: #8b5e3c;
+  color: white;
+  border: none;
+}
+
+.primary:hover,
+button:hover {
+  background: #6e492f;
 }
 
 .secondary {
-  color: white;
-  border: 1px solid white;
+  color: #8b5e3c;
+  border: 1px solid #8b5e3c;
+  background: transparent;
+}
+
+.secondary:hover {
+  background: #efe6dc;
 }
 
 .intro {
   text-align: center;
   padding: 100px 20px;
+  background: white;
 }
 
 .small-title {
-  color: #777;
+  color: #8b5e3c;
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 25px;
@@ -92,16 +120,17 @@ button {
   font-size: 64px;
   font-weight: 300;
   margin-bottom: 25px;
+  color: #2f2a26;
 }
 
 .intro p {
   font-size: 20px;
-  color: #555;
+  color: #6f6258;
 }
 
 .services {
   padding: 80px 9%;
-  background: #f7f7f7;
+  background: #f4ede5;
   text-align: center;
 }
 
@@ -117,26 +146,39 @@ button {
   padding: 35px;
   border-radius: 16px;
   text-align: left;
+  border: 1px solid #e3d7ca;
 }
 
 .card h3 {
   margin-bottom: 12px;
   font-size: 24px;
+  color: #2f2a26;
 }
 
 .card p {
-  color: #555;
+  color: #6f6258;
   line-height: 1.5;
 }
 
 .contact {
   padding: 80px 20px;
   text-align: center;
+  background: white;
+}
+
+.contact p {
+  color: #6f6258;
+  margin: 8px 0;
+}
+
+.contact a {
+  color: #8b5e3c;
+  text-decoration: none;
 }
 
 form {
   max-width: 520px;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -145,19 +187,28 @@ form {
 input,
 textarea {
   padding: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #d8cabe;
   border-radius: 10px;
   font-size: 16px;
+  background: #fffaf6;
+  color: #2f2a26;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #8b5e3c;
 }
 
 textarea {
   min-height: 130px;
 }
 
-button {
-  border: none;
-  background: #1428d4;
+footer {
+  background: #2f2a26;
   color: white;
+  text-align: center;
+  padding: 25px;
 }
 
 @media (max-width: 850px) {
@@ -167,7 +218,7 @@ button {
   }
 
   .hero-text h1 {
-    font-size: 70px;
+    font-size: 62px;
   }
 
   .cards {
@@ -177,6 +228,10 @@ button {
   .intro h2,
   .services h2,
   .contact h2 {
-    font-size: 46px;
+    font-size: 44px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
   }
 }
